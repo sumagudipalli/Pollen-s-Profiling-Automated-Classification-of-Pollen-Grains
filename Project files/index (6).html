@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pollen Grain Classification</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; background-color: #f0f8ff; }
+        h1 { color: #333; }
+        .upload-box { background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: inline-block; }
+        input[type="file"] { border: 1px solid #ccc; padding: 10px; border-radius: 5px; }
+        input[type="submit"] { background-color: #4CAF50; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        input[type="submit"]:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <div class="upload-box">
+        <h1>Pollen Grain Classification</h1>
+        <p>Upload an image of a pollen grain to classify it.</p>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <br><br>
+            <input type="submit" value="Classify">
+        </form>
+    </div>
+</body>
+</html>
